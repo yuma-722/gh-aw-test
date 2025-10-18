@@ -25,7 +25,7 @@ timeout_minutes: 15
 source: githubnext/agentics/workflows/weekly-research.md@049b826c4a2bb11aa8fd40648bc4a5956f432d1c
 ---
 # Weekly Research
-
+THI DOCS MUST WRITE IN JAPANESE
 ## Job Description
 
 Do a deep research investigation in ${{ github.repository }} repository, and the related industry in general.
