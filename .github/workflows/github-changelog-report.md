@@ -4,7 +4,7 @@ on:
 
 # Permissions - what can this workflow access?
 permissions:
-  contents: read
+  contents: write
   issues: write
   pull-requests: write
 
