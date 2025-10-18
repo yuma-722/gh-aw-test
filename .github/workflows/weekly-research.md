@@ -16,9 +16,14 @@ safe-outputs:
     title-prefix: "${{ github.workflow }}"
     category: "ideas"
 
-tools:
-  web-fetch:
-  web-search:
+
+mcp-servers:
+  tavily:
+    command: npx
+    args: ["-y", "@tavily/mcp-server"]
+    env:
+      TAVILY_API_KEY: "${{ secrets.TAVILY_API_KEY }}"
+    allowed: ["search", "search_news"]
 
 timeout_minutes: 15
 
