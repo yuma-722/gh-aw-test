@@ -957,6 +957,7 @@ jobs:
           # github-changelog-report
           
           このワークフローは、GitHub Changelogの最新情報を取得し、カテゴリごとに分類したレポートを作成します。
+          Please write in Japanese.
           
           ## Instructions
           
@@ -965,6 +966,10 @@ jobs:
           3. 取得した情報を `<category domain="changelog-label">` ごとに分類する
           4. https://github.com/github-dockyard-community/radio/discussions/14 の形式に則ってレポートを作成する
           5. 作成したレポートをDiscussionとして投稿する（内容は日本語で記述する）
+          
+          ## 注意点
+          - Tavily MCPが使えない場合はcurlコマンドを実行すること
+          - エラーが起きた場合は原因と解消方法を日本語で明示すること
           
           EOF
       - name: Append XPIA security instructions to prompt
@@ -3421,7 +3426,7 @@ jobs:
         env:
           WORKFLOW_NAME: "github-changelog-report"
           WORKFLOW_DESCRIPTION: "No description provided"
-          WORKFLOW_MARKDOWN: "# github-changelog-report\n\nこのワークフローは、GitHub Changelogの最新情報を取得し、カテゴリごとに分類したレポートを作成します。\n\n## Instructions\n\n1. Tavily MCPを使用して https://github.blog/changelog/feed/ の内容を取得する\n2. RSSフィードから `<pubDate>` を確認し、実行日の3日前までの情報のみをフィルタリングする\n3. 取得した情報を `<category domain=\"changelog-label\">` ごとに分類する\n4. https://github.com/github-dockyard-community/radio/discussions/14 の形式に則ってレポートを作成する\n5. 作成したレポートをDiscussionとして投稿する（内容は日本語で記述する）\n"
+          WORKFLOW_MARKDOWN: "# github-changelog-report\n\nこのワークフローは、GitHub Changelogの最新情報を取得し、カテゴリごとに分類したレポートを作成します。\nPlease write in Japanese.\n\n## Instructions\n\n1. Tavily MCPを使用して https://github.blog/changelog/feed/ の内容を取得する\n2. RSSフィードから `<pubDate>` を確認し、実行日の3日前までの情報のみをフィルタリングする\n3. 取得した情報を `<category domain=\"changelog-label\">` ごとに分類する\n4. https://github.com/github-dockyard-community/radio/discussions/14 の形式に則ってレポートを作成する\n5. 作成したレポートをDiscussionとして投稿する（内容は日本語で記述する）\n\n## 注意点\n- Tavily MCPが使えない場合はcurlコマンドを実行すること\n- エラーが起きた場合は原因と解消方法を日本語で明示すること\n"
         with:
           script: |
             const fs = require('fs');
