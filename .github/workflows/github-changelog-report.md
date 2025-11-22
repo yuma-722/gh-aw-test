@@ -15,10 +15,22 @@ safe-outputs:
     title-prefix: "${{ github.workflow }}"
     category: "アジェンダ"
 
+network:
+  allowed:
+    - defaults
+    - github
+    - node
+    - "github.blog"
+    - "*.github.blog"
+
+tools:
+  bash:
+  web-fetch:
+
 mcp-servers:
   tavily:
-    command: npx
-    args: ["-y", "@tavily/mcp-server"]
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-tavily"]
     env:
       TAVILY_API_KEY: "${{ secrets.TAVILY_API_KEY }}"
     allowed: ["search", "search_news"]
