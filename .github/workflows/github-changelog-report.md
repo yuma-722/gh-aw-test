@@ -60,5 +60,7 @@ Please write in Japanese.
 - `body` には、上記手順で作成した日本語レポート全文を Markdown 形式で入れてください。
 
 ## 注意点
-- Tavily MCPが使えない場合はcurlコマンドを実行すること
-- エラーが起きた場合は原因と解消方法を日本語で明示すること
+- Tavily MCP が使えない場合（MCP クライアントの起動に失敗したり、エラーが返る場合）は、必ず `curl` コマンドを使って RSS フィードを取得してください。
+  - 例: `curl -s https://github.blog/changelog/feed/`
+  - Tavily での取得に失敗しても、そこで処理を止めず、必ず `curl` での取得を試みてください。
+- Tavily も `curl` もどちらも使えない場合のみ、その旨と原因・解消方法を日本語で明示したレポートを safe-outputs の Discussion として出力してください。
