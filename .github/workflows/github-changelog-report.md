@@ -1,14 +1,15 @@
 ---
 on:
-  workflow_dispatch:  
+  workflow_dispatch:
 
-# Permissions - what can this workflow access?
+# Permissions - mainジョブでは書き込み権限を持たせず、safe-outputsで書き込みを行います
 permissions:
-  contents: write
-  issues: write
-  pull-requests: write
+  contents: read
+  actions: read
+  issues: read
+  pull-requests: read
 
-# Outputs - what APIs and tools can the AI use?
+# Outputs - Discussion作成はsafe-outputs経由で行います
 safe-outputs:
   create-discussion:
     title-prefix: "${{ github.workflow }}"
@@ -22,7 +23,7 @@ mcp-servers:
       TAVILY_API_KEY: "${{ secrets.TAVILY_API_KEY }}"
     allowed: ["search", "search_news"]
 
-timeout_minutes: 15
+timeout-minutes: 15
 
 ---
 

@@ -25,7 +25,7 @@ mcp-servers:
       TAVILY_API_KEY: "${{ secrets.TAVILY_API_KEY }}"
     allowed: ["search", "search_news"]
 
-timeout_minutes: 15
+timeout-minutes: 15
 
 source: githubnext/agentics/workflows/weekly-research.md@049b826c4a2bb11aa8fd40648bc4a5956f432d1c
 ---
