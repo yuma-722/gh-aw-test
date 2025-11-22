@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Github Agentic Workflows",
+      "dependsOn": ["Compile gh-aw"],
+      "type": "shell",
+      "command": "./gh-aw",
+      "args": ["compile", "--watch"],
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "gh-aw",
+        "fileLocation": "relative",
+        "pattern": {
+          "regexp": "^(.*?):(\\d+):(\\d+):\\s(error|warning):\\s(.+)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Watching for file changes",
+          "endsPattern": "Recompiled"
+        }
+      },
+      "group": { "kind": "build", "isDefault": true },
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}
