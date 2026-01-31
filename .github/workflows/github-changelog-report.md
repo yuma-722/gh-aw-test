@@ -30,7 +30,7 @@ tools:
 mcp-servers:
   tavily:
     command: "npx"
-    args: ["-y", "@modelcontextprotocol/server-tavily"]
+    args: ["-y", "@tavily/mcp-server"]
     env:
       TAVILY_API_KEY: "${{ secrets.TAVILY_API_KEY }}"
     allowed: ["search", "search_news"]

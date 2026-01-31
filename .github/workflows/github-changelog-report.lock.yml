@@ -20,7 +20,7 @@
 # For more information: https://github.com/githubnext/gh-aw/blob/main/.github/aw/github-agentic-workflows.md
 #
 #
-# frontmatter-hash: 81e65b6eec77ec8573b90f07ab38039b07b264d3da680dcfdcd0a8d4cc219cdf
+# frontmatter-hash: 7b0cbce42cc9ea62830c7de62dca4abbf24d44f8928d469cfc72a4b198952c45
 
 name: "github-changelog-report"
 "on":
@@ -402,7 +402,7 @@ jobs:
                 "entrypointArgs": [
                   "npx",
                   "-y",
-                  "@modelcontextprotocol/server-tavily"
+                  "@tavily/mcp-server"
                 ],
                 "tools": [
                   "search",
