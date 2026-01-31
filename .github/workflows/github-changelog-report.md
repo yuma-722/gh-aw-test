@@ -52,24 +52,11 @@ Please write in Japanese.
 4. https://github.com/github-dockyard-community/radio/discussions/14 の形式に則ってレポートを作成する
 5. 作成したレポートをDiscussionとして投稿する（内容は日本語で記述する）
 
-## safe-outputs への出力フォーマット
+## Discussionの作成
 
-- 最後に必ず `create-discussion` 用の safe-output を 1 件出力してください。
-- 出力形式は以下の JSON オブジェクト 1 つだけにしてください（前後に説明文などを書かないこと）。
-
-```json
-{
-  "create-discussion": [
-    {
-      "title": "GitHub Changelog アップデートまとめ (YYYY-MM-DD)",
-      "body": "ここに Markdown 形式の本文を入れてください"
-    }
-  ]
-}
-```
-
-- `title` には手動実行した日付（JST）を含めてください（例: `GitHub Changelog アップデートまとめ (2025-11-22)`）。
-- `body` には、上記手順で作成した日本語レポート全文を Markdown 形式で入れてください。
+- 最後に必ずDiscussionを作成してください（safe-outputsツールを使用）
+- タイトル形式: `GitHub Changelog アップデートまとめ (YYYY-MM-DD)` ※手動実行した日付（JST）を含める
+- 本文: 上記手順で作成した日本語レポート全文をMarkdown形式で記載
 
 ## 注意点
 - Tavily MCP が使えない場合（MCP クライアントの起動に失敗したり、エラーが返る場合）は、必ず `curl` コマンドを使って RSS フィードを取得してください。
