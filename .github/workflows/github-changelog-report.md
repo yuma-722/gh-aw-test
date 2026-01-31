@@ -23,10 +23,6 @@ network:
     - "github.blog"
     - "*.github.blog"
 
-tools:
-  bash:
-  web-fetch:
-
 mcp-servers:
   tavily:
     command: "npx"
